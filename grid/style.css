@@ -1,0 +1,154 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.menu{
+    background-color: rgba(190, 190, 190, 0.836);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    height: 4em;
+    padding: 1em 1em;
+}
+.menu>a{
+   text-decoration: none;
+   background-color: white;
+   color: black;
+   height: 2em;
+   margin: 0 1em;
+   padding-top: 0.6em;
+   text-align: center;
+}
+.menu>a:hover{
+    background-color: black;
+    color: white;
+    
+}
+.body-1{
+    display: grid;
+    grid-template-areas: 
+    'img img membership'
+    'img img pre-membership'      ;
+    gap: 1em;
+    background-color: rgba(190, 190, 190, 0.836);
+    padding: 0em 2em;
+}
+#img{
+    grid-area: img;
+    min-height: 400px;
+    background-image: url(images/MlaxqY.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    justify-items: start;
+    align-content:center;
+    padding-left: 1em;
+}
+#img>h2{
+    margin-bottom: 2em;
+}
+.body-1>div>p{
+    font-size: 20px;
+}
+#membership{
+    background-color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+#pre-membership{
+    background-color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+div>button{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    margin-top: 2em;
+}
+.body-1bottom{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 1em;
+   background-color: rgba(190, 190, 190, 0.836);
+   padding: 1em 2em 0em;
+}
+.body-1bottom>div{
+    background-color: white;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    padding: 1.5em;
+}
+.body-1bottom>div>h3{
+    margin: 1em;
+}
+.body-2{
+    display: grid;
+    grid-template-areas: 
+    'img text';
+    background-color: rgba(190, 190, 190, 0.836);
+    padding: 1em 2em;
+}
+.body-2>img{
+    grid-area: img;
+    width: 100%;
+}
+#text{
+    grid-area: text;
+    display: grid;
+    background-color: white;
+    align-content: center;
+    justify-items: start;
+    padding: 2em;
+}
+#text>p{
+    padding-top: 5em;
+}
+.body-3{
+    background-color: rgba(190, 190, 190, 0.836);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 200px 200px;
+    gap: 1em;
+    padding: 1em 2em;
+} 
+.body-3>img{
+    height: 100%;
+    width: 100%;
+}
+
+.footer{
+    background-color: rgba(190, 190, 190, 0.836);
+    padding: 2em 2em ;
+}
+.footer>div{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+@media (max-width: 700px) {
+    .body-1{
+        grid-template-areas: 
+        'img img'
+        'membership pre-membership';
+    }
+    #membership,#pre-membership{
+        height: 200px;
+    }
+    .body-2{
+        grid-template-areas: 
+        'img'
+        'text';
+    }
+}
+    @media(max-width: 500px){
+    .menu{
+        grid-template-columns: 1fr;
+        height: 220px;
+    }
+}
